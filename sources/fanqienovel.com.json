@@ -1,0 +1,52 @@
+{
+  "sourceName": "番茄小说",
+  "sourceType": 0,
+  "sourceUrl": "https://fanqienovel.com",
+  "bookInfoPattern": "",
+  "exploreUrl": "",
+  "header": "",
+  "ruleBookInfo": {
+    "infoAuthor": "",
+    "infoCoverUrl": "",
+    "infoIntro": "",
+    "infoKind": "",
+    "infoLastChapter": "",
+    "infoName": "",
+    "infoTocUrl": "",
+    "infoWordCount": ""
+  },
+  "ruleContent": {
+    "content": "$.data.data.content",
+    "nextContentUrl": ""
+  },
+  "ruleExplore": {
+    "exploreAuthor": "",
+    "exploreBookList": "",
+    "exploreBookUrl": "",
+    "exploreCoverUrl": "",
+    "exploreIntro": "",
+    "exploreKind": "",
+    "exploreLastChapter": "",
+    "exploreName": ""
+  },
+  "ruleSearch": {
+    "searchAuthor": "$.author",
+    "searchBookList": "$.data.search_book_data_list",
+    "searchBookUrl": "https://fanqienovel.com/api/reader/directory/detail?bookId={{$.book_id}}",
+    "searchCoverUrl": "$.thumb_url",
+    "searchIntro": "$.book_abstract",
+    "searchKind": "$.category##,.*",
+    "searchLastChapter": "$.last_chapter_title",
+    "searchName": "$.book_name",
+    "searchWordCount": "$.word_count"
+  },
+  "ruleToc": {
+    "tocList": "$.data.chapterListWithVolume[*]",
+    "tocName": "$.title",
+    "tocUrl": "http://reading.api-fanqienovel.sunianyun.live/content?item_id={{$.itemId}}",
+    "isVip": "",
+    "nextTocUrl": "",
+    "tocUpdateTime": ""
+  },
+  "searchUrl": "https://fanqienovel.com/api/author/search/search_book/v1?filter=127,127,127,127&page_count=10&page_index={{page-1}}&query_type=0&query_word={{key}}"
+}
