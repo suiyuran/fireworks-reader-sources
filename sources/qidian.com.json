@@ -1,0 +1,52 @@
+{
+  "sourceName": "起点中文",
+  "sourceType": 0,
+  "sourceUrl": "https://www.qidian.com",
+  "bookInfoPattern": "",
+  "exploreUrl": "月票榜::https://m.qidian.com/majax/rank/yuepiaolist?pageNum={{page}}&_csrfToken=6Y3AwxrFykBChoBmHhwSg9i4WE8PsUK5QpuUp4Gm\n畅销榜::https://m.qidian.com/majax/rank/hotsaleslist?pageNum={{page}}&_csrfToken=6Y3AwxrFykBChoBmHhwSg9i4WE8PsUK5QpuUp4Gm\n阅读榜::https://m.qidian.com/majax/rank/readindexlist?pageNum={{page}}&_csrfToken=6Y3AwxrFykBChoBmHhwSg9i4WE8PsUK5QpuUp4Gm\n书友榜::https://m.qidian.com/majax/rank/newfanslist?pageNum={{page}}&_csrfToken=6Y3AwxrFykBChoBmHhwSg9i4WE8PsUK5QpuUp4Gm\n推荐榜::https://m.qidian.com/majax/rank/reclist?pageNum={{page}}&_csrfToken=6Y3AwxrFykBChoBmHhwSg9i4WE8PsUK5QpuUp4Gm\n打赏榜::https://m.qidian.com/majax/rank/rewardlist?pageNum={{page}}&_csrfToken=6Y3AwxrFykBChoBmHhwSg9i4WE8PsUK5QpuUp4Gm\n更新榜::https://m.qidian.com/majax/rank/updatelist?pageNum={{page}}&_csrfToken=6Y3AwxrFykBChoBmHhwSg9i4WE8PsUK5QpuUp4Gm\n签约榜::https://m.qidian.com/majax/rank/signlist?pageNum={{page}}&_csrfToken=6Y3AwxrFykBChoBmHhwSg9i4WE8PsUK5QpuUp4Gm\n新书榜::https://m.qidian.com/majax/rank/newbooklist?pageNum={{page}}&_csrfToken=6Y3AwxrFykBChoBmHhwSg9i4WE8PsUK5QpuUp4Gm\n新人榜::https://m.qidian.com/majax/rank/newauthorlist?pageNum={{page}}&_csrfToken=6Y3AwxrFykBChoBmHhwSg9i4WE8PsUK5QpuUp4Gm",
+  "header": "{\"Cookie\":\"_csrfToken=6Y3AwxrFykBChoBmHhwSg9i4WE8PsUK5QpuUp4Gm\"}",
+  "ruleBookInfo": {
+    "infoAuthor": "",
+    "infoCoverUrl": "",
+    "infoIntro": "",
+    "infoKind": "",
+    "infoLastChapter": "",
+    "infoName": "",
+    "infoTocUrl": "",
+    "infoWordCount": ""
+  },
+  "ruleContent": {
+    "content": "$.data.chapterInfo.content",
+    "nextContentUrl": ""
+  },
+  "ruleExplore": {
+    "exploreAuthor": "",
+    "exploreBookList": "",
+    "exploreBookUrl": "",
+    "exploreCoverUrl": "",
+    "exploreIntro": "",
+    "exploreKind": "",
+    "exploreLastChapter": "",
+    "exploreName": ""
+  },
+  "ruleSearch": {
+    "searchAuthor": "$.bAuth",
+    "searchBookList": "$.data.records||$.data.bookInfo.records",
+    "searchBookUrl": "https://m.qidian.com/majax/book/category?bookId={{$.bid}}@put:{bid:$.bid}&_csrfToken=6Y3AwxrFykBChoBmHhwSg9i4WE8PsUK5QpuUp4Gm",
+    "searchCoverUrl": "https://bookcover.yuewen.com/qdbimg/349573/{{$.bid}}/180.webp",
+    "searchIntro": "$.desc",
+    "searchKind": "$.cat",
+    "searchLastChapter": "$.lastChapterName",
+    "searchName": "$.bName",
+    "searchWordCount": "$.cnt"
+  },
+  "ruleToc": {
+    "tocList": "$.data.vs[*].cs[*]",
+    "tocName": "$.cN",
+    "tocUrl": "https://m.qidian.com/majax/chapter/getChapterInfo?bookId=@get:{bid}&chapterId={{$.id}}&_csrfToken=6Y3AwxrFykBChoBmHhwSg9i4WE8PsUK5QpuUp4Gm",
+    "isVip": "$.sS@js:!+result",
+    "nextTocUrl": "",
+    "tocUpdateTime": ""
+  },
+  "searchUrl": "https://m.qidian.com/majax/search/list?kw={{key}}&pageNum={{page}}&_csrfToken=6Y3AwxrFykBChoBmHhwSg9i4WE8PsUK5QpuUp4Gm"
+}
