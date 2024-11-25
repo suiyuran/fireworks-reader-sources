@@ -50,5 +50,57 @@
       "tocUpdateTime": ""
     },
     "searchUrl": "https://m.qidian.com/majax/search/list?kw={{key}}&pageNum={{page}}&_csrfToken=6Y3AwxrFykBChoBmHhwSg9i4WE8PsUK5QpuUp4Gm"
+  },
+  {
+    "sourceName": "纵横中文",
+    "sourceType": 0,
+    "sourceUrl": "https://www.zongheng.com",
+    "bookInfoPattern": "",
+    "exploreUrl": "月票榜::https://www.zongheng.com/api/rank/details,{\"method\":\"POST\",\"body\":\"rankType=1&pageNum={{page}}\"}\n畅销榜::https://www.zongheng.com/api/rank/details,{\"method\":\"POST\",\"body\":\"rankType=3&pageNum={{page}}\"}\n新书榜::https://www.zongheng.com/api/rank/details,{\"method\":\"POST\",\"body\":\"rankType=4&pageNum={{page}}\"}\n点击榜::https://www.zongheng.com/api/rank/details,{\"method\":\"POST\",\"body\":\"rankType=5&pageNum={{page}}\"}\n推荐榜::https://www.zongheng.com/api/rank/details,{\"method\":\"POST\",\"body\":\"rankType=6&pageNum={{page}}\"}\n捧场榜::https://www.zongheng.com/api/rank/details,{\"method\":\"POST\",\"body\":\"rankType=7&pageNum={{page}}\"}\n完结榜::https://www.zongheng.com/api/rank/details,{\"method\":\"POST\",\"body\":\"rankType=8&pageNum={{page}}\"}\n订阅榜::https://www.zongheng.com/api/rank/details,{\"method\":\"POST\",\"body\":\"rankType=9&pageNum={{page}}\"}\n更新榜::https://www.zongheng.com/api/rank/details,{\"method\":\"POST\",\"body\":\"rankType=10&pageNum={{page}}\"}",
+    "header": "",
+    "ruleBookInfo": {
+      "infoAuthor": "",
+      "infoCoverUrl": "",
+      "infoIntro": "",
+      "infoKind": "",
+      "infoLastChapter": "",
+      "infoName": "",
+      "infoTocUrl": "",
+      "infoWordCount": "$..tomeTotalWords@js:result.split(/\\s/).reduce((a,b)=>eval(`${a}+${b}`))"
+    },
+    "ruleContent": {
+      "content": "@css:.content@html",
+      "nextContentUrl": ""
+    },
+    "ruleExplore": {
+      "exploreAuthor": "$.pseudonym",
+      "exploreBookList": "$.result.resultList",
+      "exploreBookUrl": "https://bookapi.zongheng.com/api/chapter/getChapterList,{\"method\":\"POST\",\"body\":\"bookId={{$.bookId}}\"}",
+      "exploreCoverUrl": "$.bookCover",
+      "exploreIntro": "$.description",
+      "exploreKind": "$.cateFineName",
+      "exploreLastChapter": "$.latestChapterName",
+      "exploreName": "$.bookName"
+    },
+    "ruleSearch": {
+      "searchAuthor": "$.authorName",
+      "searchBookList": "$.data.datas.list",
+      "searchBookUrl": "https://bookapi.zongheng.com/api/chapter/getChapterList,{\"method\":\"POST\",\"body\":\"bookId={{$.bookId}}\"}",
+      "searchCoverUrl": "https://static.zongheng.com/upload/{{$.coverUrl}}",
+      "searchIntro": "$.description",
+      "searchKind": "$.cateFineName",
+      "searchLastChapter": "$.chapterName",
+      "searchName": "$.name##</?font.*?>",
+      "searchWordCount": "$.totalWord"
+    },
+    "ruleToc": {
+      "tocList": "$.result.chapterList[*].chapterViewList[*]",
+      "tocName": "$.chapterName",
+      "tocUrl": "https://read.zongheng.com/chapter/{{$.bookId}}/{{$.chapterId}}.html",
+      "isVip": "$.level",
+      "nextTocUrl": "",
+      "tocUpdateTime": ""
+    },
+    "searchUrl": "https://search.zongheng.com/search/book?keyword={{key}}&pageNo={{page}}"
   }
 ]
