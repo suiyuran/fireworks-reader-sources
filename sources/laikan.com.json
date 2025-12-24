@@ -1,0 +1,52 @@
+{
+  "sourceName": "来看中文",
+  "sourceType": 0,
+  "sourceUrl": "https://www.laikan.com",
+  "bookInfoPattern": "",
+  "exploreUrl": "畅销榜::https://app2.motie.com/ranking/detail?siteId=1&rankType=9&group=2&pageNo={{page}}\n点击榜::https://app2.motie.com/ranking/detail?siteId=1&rankType=10&group=2&pageNo={{page}}\n打赏榜::https://app2.motie.com/ranking/detail?siteId=1&rankType=11&group=2&pageNo={{page}}\n推荐榜::https://app2.motie.com/ranking/detail?siteId=1&rankType=12&group=2&pageNo={{page}}\n书评榜::https://app2.motie.com/ranking/detail?siteId=1&rankType=17&group=2&pageNo={{page}}",
+  "header": "{\"os\":\"pc\"}",
+  "ruleBookInfo": {
+    "infoAuthor": "",
+    "infoCoverUrl": "",
+    "infoIntro": "$.data.content",
+    "infoKind": "",
+    "infoLastChapter": "",
+    "infoName": "",
+    "infoTocUrl": "https://app2.motie.com/pc/book/{{$.data.bookId}}/catalog",
+    "infoWordCount": ""
+  },
+  "ruleContent": {
+    "content": "$.data.content",
+    "nextContentUrl": ""
+  },
+  "ruleExplore": {
+    "exploreAuthor": "",
+    "exploreBookList": "",
+    "exploreBookUrl": "",
+    "exploreCoverUrl": "",
+    "exploreIntro": "",
+    "exploreKind": "",
+    "exploreLastChapter": "",
+    "exploreName": ""
+  },
+  "ruleSearch": {
+    "searchAuthor": "$.authorName",
+    "searchBookList": "$.data||$.data.bookList",
+    "searchBookUrl": "https://app2.motie.com/pc/book/{{$.bookId||$.id}}/detail",
+    "searchCoverUrl": "$.bookIconUrl||$.icon",
+    "searchIntro": "$.introduce",
+    "searchKind": "$.categoryVO.name",
+    "searchLastChapter": "$.lastChapterName",
+    "searchName": "$.bookName||$.name",
+    "searchWordCount": "$.words"
+  },
+  "ruleToc": {
+    "tocList": "$.data.data[?(@.volumeId)]",
+    "tocName": "$.name",
+    "tocUrl": "https://app2.motie.com/pc/chapter/{{$.id}}",
+    "isVip": "$.price",
+    "nextTocUrl": "",
+    "tocUpdateTime": ""
+  },
+  "searchUrl": "https://app2.motie.com/search?word={{key}}&pageNo={{page}}"
+}
